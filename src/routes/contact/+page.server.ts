@@ -3,10 +3,10 @@ import { z } from 'zod';
 import type { Actions } from './$types';
 
 const contactSchema = z.object({
-	name: z.string().min(2, 'Name must be at least 2 characters'),
-	email: z.string().email('Invalid email address'),
+	name: z.string().min(2, 'Jméno musí mít alespoň 2 znaky'),
+	email: z.string().email('Neplatná emailová adresa'),
 	phone: z.string().optional(),
-	message: z.string().min(10, 'Message must be at least 10 characters')
+	message: z.string().min(10, 'Zpráva musí mít alespoň 10 znaků')
 });
 
 export const actions: Actions = {

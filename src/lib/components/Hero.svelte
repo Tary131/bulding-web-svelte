@@ -23,21 +23,20 @@
 
 <section
 	bind:this={heroRef}
-	class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-secondary-50 via-white to-primary-50 dark:from-secondary-950 dark:via-secondary-900 dark:to-secondary-950 pt-20"
+	class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-white to-primary-50/30 dark:from-secondary-950 dark:via-secondary-900 dark:to-secondary-950 pt-24"
 >
 	<div class="container-custom text-center">
-		<h1 bind:this={titleRef} class="heading-1 mb-6 opacity-0">
-			Building Your Dreams
+		<h1 bind:this={titleRef} class="heading-1 mb-6 opacity-0 text-secondary-900 dark:text-white">
+			Profesionální stavební služby
 			<br />
-			<span class="text-primary-600 dark:text-primary-400">Into Reality</span>
+			<span class="text-primary-500 dark:text-primary-400">pro váš domov</span>
 		</h1>
 		<p bind:this={subtitleRef} class="text-body text-xl mb-8 max-w-2xl mx-auto opacity-0">
-			Expert construction services with quality craftsmanship. From concept to completion, we bring
-			your vision to life with precision and care.
+			Rodinná stavební firma s dlouholetými zkušenostmi. Nabízíme kvalitní rekonstrukce, zednické práce, obklady, dlažby a další stavební služby.
 		</p>
 		<div bind:this={ctaRef} class="flex flex-col sm:flex-row gap-4 justify-center opacity-0">
-			<a href="/contact" class="btn-primary"> Get Started </a>
-			<a href="/services" class="btn-secondary"> Our Services </a>
+			<a href="/kontakt" class="btn-primary"> Kontaktovat nás </a>
+			<a href="/sluzby" class="btn-secondary"> Naše služby </a>
 		</div>
 	</div>
 
