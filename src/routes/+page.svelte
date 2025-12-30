@@ -8,6 +8,7 @@
 	import ContactSection from '../lib/components/ContactSection.svelte';
 	import Header from '../lib/components/Header.svelte';
 	import Footer from '../lib/components/Footer.svelte';
+	import * as m from '$lib/paraglide/messages';
 
 	let heroRef: HTMLElement;
 	let aboutRef: HTMLElement;
@@ -35,8 +36,8 @@
 </script>
 
 <svelte:head>
-	<title>HR Stavby - Profesionální stavební služby</title>
-	<meta name="description" content="Rodinná stavební firma s dlouholetými zkušenostmi. Nabízíme kvalitní rekonstrukce, zednické práce, obklady, dlažby a další stavební služby." />
+	<title>{m['header.title']()} - {m['hero.title']()}</title>
+	<meta name="description" content={m['hero.subtitle']()} />
 </svelte:head>
 
 <Header />

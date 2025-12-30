@@ -1,14 +1,15 @@
 <script lang="ts">
 	import { projects } from '../data/projects';
+	import * as m from '$lib/paraglide/messages';
 
 	const displayedProjects = projects.slice(0, 3);
 </script>
 
 <div class="container-custom">
 	<div class="text-center mb-12">
-		<h2 class="heading-2 mb-4 text-secondary-900 dark:text-white">Naše realizace</h2>
+		<h2 class="heading-2 mb-4 text-secondary-900 dark:text-white">{m['projects.title']()}</h2>
 		<p class="text-body max-w-2xl mx-auto">
-			Prohlédněte si ukázky naší práce. Každý projekt řešíme s důrazem na kvalitu a spokojenost klienta.
+			{m['projects.subtitle']()}
 		</p>
 	</div>
 
@@ -44,7 +45,7 @@
 	</div>
 
 	<div class="text-center mt-12">
-		<a href="/realizace" class="btn-secondary">Zobrazit všechny realizace</a>
+		<a href="/realizace" class="btn-secondary">{m['projects.showAll']()}</a>
 	</div>
 </div>
 

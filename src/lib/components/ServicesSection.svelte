@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { services } from '../data/services';
 	import { HomeIcon, WrenchScrewdriverIcon, PaintBrushIcon, BuildingOffice2Icon, SparklesIcon } from 'heroicons-svelte/24/outline';
+	import * as m from '$lib/paraglide/messages';
 
 	const serviceIcons: Record<string, any> = {
 		'rekonstrukce-bytu-domu': HomeIcon,
@@ -15,9 +16,9 @@
 
 <div class="container-custom">
 	<div class="text-center mb-12">
-		<h2 class="heading-2 mb-4 text-secondary-900 dark:text-white">Naše služby</h2>
+		<h2 class="heading-2 mb-4 text-secondary-900 dark:text-white">{m['services.title']()}</h2>
 		<p class="text-body max-w-2xl mx-auto">
-			Komplexní stavební řešení pro vaše projekty. Nabízíme širokou škálu stavebních služeb pro vaše byty, domy a další objekty.
+			{m['services.subtitle']()}
 		</p>
 	</div>
 
@@ -42,7 +43,7 @@
 	</div>
 
 	<div class="text-center mt-8">
-		<a href="/sluzby" class="btn-secondary">Zobrazit všechny služby</a>
+		<a href="/sluzby" class="btn-secondary">{m['services.showAll']()}</a>
 	</div>
 </div>
 

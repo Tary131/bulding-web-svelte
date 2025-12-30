@@ -1,28 +1,25 @@
 <script lang="ts">
+	import * as m from '$lib/paraglide/messages';
 	import { CheckCircleIcon } from 'heroicons-svelte/24/solid';
 
-	const features = [
-		'Dlouholeté zkušenosti',
-		'Licencované a pojištěné',
-		'Kvalitní řemeslné zpracování',
-		'Dodržení termínů',
-		'Konkurenční ceny',
-		'Garance spokojenosti zákazníka'
+	$: features = [
+		m['about.why1'](),
+		m['about.why2'](),
+		m['about.why3'](),
+		m['about.why4'](),
+		m['about.why5']()
 	];
 </script>
 
 <div class="container-custom">
 	<div class="grid md:grid-cols-2 gap-12 items-center">
 		<div>
-			<h2 class="heading-2 mb-6 text-secondary-900 dark:text-white">O naší firmě</h2>
+			<h2 class="heading-2 mb-6 text-secondary-900 dark:text-white">{m['about.title']()}</h2>
 			<p class="text-body mb-6">
-				Jsme rodinná stavební firma s dlouholetými zkušenostmi v oboru. Specializujeme se na
-				rekonstrukce bytů a domů, zednické práce, obklady, dlažby a další stavební služby v Praze a
-				okolí.
+				{m['about.description1']()}
 			</p>
 			<p class="text-body mb-8">
-				Každý projekt řešíme s důrazem na kvalitu, spolehlivost a spokojenost klienta. Věříme v
-				transparentní komunikaci, férové ceny a dodání výsledků, které vydrží.
+				{m['about.description2']()}
 			</p>
 			<div class="grid grid-cols-2 gap-4">
 				{#each features as feature}
@@ -41,7 +38,7 @@
 				<div
 					class="w-full h-full flex items-center justify-center text-white text-2xl font-bold text-center px-4"
 				>
-					Profesionální stavební služby
+					{m['hero.title']()}
 				</div>
 			</div>
 		</div>

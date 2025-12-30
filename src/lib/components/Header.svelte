@@ -2,17 +2,19 @@
 	import { onMount } from 'svelte';
 	import { Bars3Icon, XMarkIcon } from 'heroicons-svelte/24/outline';
 	import DarkModeSwitcher from './DarkModeSwitcher.svelte';
+	import LanguageSwitcher from './LanguageSwitcher.svelte';
+	import * as m from '$lib/paraglide/messages';
 
 	let mobileMenuOpen = false;
 	let scrolled = false;
 	let headerRef: HTMLElement;
 
-	const navItems = [
-		{ href: '/', label: 'Domů' },
-		{ href: '/sluzby', label: 'Služby' },
-		{ href: '/realizace', label: 'Realizace' },
-		{ href: '/o-firme', label: 'O firmě' },
-		{ href: '/kontakt', label: 'Kontakt' }
+	$: navItems = [
+		{ href: '/', label: m['common.home']() },
+		{ href: '/sluzby', label: m['common.services']() },
+		{ href: '/realizace', label: m['common.projects']() },
+		{ href: '/o-firme', label: m['common.about']() },
+		{ href: '/kontakt', label: m['common.contact']() }
 	];
 
 	onMount(() => {
@@ -37,11 +39,11 @@
 	<nav class="container-custom">
 		<div class="flex items-center justify-between h-20">
 			<a href="/" class="text-2xl font-bold text-primary-500 dark:text-primary-400">
-				HR Stavby
+				{m['header.title']()}
 			</a>
 
 			<!-- Desktop Navigation -->
-			<div class="hidden md:flex items-center space-x-6">
+			<div class="hidden md:flex items-center space-x-4">
 				{#each navItems as item}
 					<a
 						href={item.href}
@@ -50,11 +52,13 @@
 						{item.label}
 					</a>
 				{/each}
+				<LanguageSwitcher />
 				<DarkModeSwitcher />
 			</div>
 
 			<!-- Mobile Menu Button -->
 			<div class="md:hidden flex items-center gap-2">
+				<LanguageSwitcher />
 				<DarkModeSwitcher />
 				<button
 					on:click={toggleMobileMenu}
