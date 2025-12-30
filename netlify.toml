@@ -1,0 +1,7 @@
+[build]
+  command = "yarn build"
+  publish = ".svelte-kit"
+
+[[plugins]]
+  package = "@netlify/plugin-sveltekit"
+

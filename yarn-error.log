@@ -1,0 +1,83 @@
+Arguments: 
+  /Users/taraspinchak/.local/share/mise/installs/node/22.16.0/bin/node /Users/taraspinchak/.local/share/mise/installs/yarn/1.22.19/bin/yarn.js install
+
+PATH: 
+  /Users/taraspinchak/.local/share/mise/installs/bun/1.2.16/bin:/Users/taraspinchak/.local/share/mise/installs/node/22.16.0/bin:/Users/taraspinchak/.local/share/mise/installs/yarn/1.22.19/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/taraspinchak/.local/share/mise/installs/node/22.16.0/bin:/opt/homebrew/opt/mise/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Applications/Warp.app/Contents/Resources/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  22.16.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@superforms%2fsveltekit: Not found
+      at params.callback [as _callback] (/Users/taraspinchak/.local/share/mise/installs/yarn/1.22.19/lib/cli.js:66145:18)
+      at self.callback (/Users/taraspinchak/.local/share/mise/installs/yarn/1.22.19/lib/cli.js:140890:22)
+      at Request.emit (node:events:518:28)
+      at Request.<anonymous> (/Users/taraspinchak/.local/share/mise/installs/yarn/1.22.19/lib/cli.js:141862:10)
+      at Request.emit (node:events:518:28)
+      at IncomingMessage.<anonymous> (/Users/taraspinchak/.local/share/mise/installs/yarn/1.22.19/lib/cli.js:141784:12)
+      at Object.onceWrapper (node:events:632:28)
+      at IncomingMessage.emit (node:events:530:35)
+      at endReadableNT (node:internal/streams/readable:1698:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+
+npm manifest: 
+  {
+    "name": "bulding-web-svelte",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+      "dev": "vite dev",
+      "build": "vite build",
+      "preview": "vite preview",
+      "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+      "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+      "lint": "prettier --check . && eslint .",
+      "format": "prettier --write ."
+    },
+    "devDependencies": {
+      "@sveltejs/adapter-netlify": "^4.0.4",
+      "@sveltejs/kit": "^2.5.0",
+      "@sveltejs/vite-plugin-svelte": "^3.0.0",
+      "@types/eslint": "^9.6.0",
+      "@typescript-eslint/eslint-plugin": "^7.13.0",
+      "@typescript-eslint/parser": "^7.13.0",
+      "autoprefixer": "^10.4.19",
+      "eslint": "^8.57.0",
+      "eslint-config-prettier": "^9.1.0",
+      "eslint-plugin-svelte": "^2.36.0",
+      "postcss": "^8.4.40",
+      "prettier": "^3.2.5",
+      "prettier-plugin-svelte": "^3.2.2",
+      "svelte": "^4.2.12",
+      "svelte-check": "^3.6.3",
+      "tailwindcss": "^3.4.6",
+      "typescript": "^5.5.4",
+      "vite": "^5.2.0"
+    },
+    "dependencies": {
+      "@inlang/paraglide-js": "^2.0.0",
+      "@inlang/paraglide-sveltekit": "^0.16.1",
+      "@motionone/svelte": "^11.11.0",
+      "@superforms/sveltekit": "^2.0.0",
+      "clsx": "^2.1.0",
+      "dotenv": "^16.4.5",
+      "heroicons-svelte": "^2.1.1",
+      "motion": "^11.11.0",
+      "svelte-meta-tags": "^3.5.0",
+      "tailwind-merge": "^2.2.1",
+      "zod": "^3.23.8"
+    },
+    "type": "module"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
