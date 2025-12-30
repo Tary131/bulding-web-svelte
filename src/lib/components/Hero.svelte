@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { animate } from 'motion';
 	import { ArrowDownIcon } from 'heroicons-svelte/24/outline';
+	import * as m from '$lib/paraglide/messages';
 
 	let heroRef: HTMLElement;
 	let titleRef: HTMLElement;
@@ -27,16 +28,16 @@
 >
 	<div class="container-custom text-center">
 		<h1 bind:this={titleRef} class="heading-1 mb-6 opacity-0 text-secondary-900 dark:text-white">
-			Profesionální stavební služby
+			{m['hero.title']()}
 			<br />
-			<span class="text-primary-500 dark:text-primary-400">pro váš domov</span>
+			<span class="text-primary-500 dark:text-primary-400">{m['hero.homeSubtitle']()}</span>
 		</h1>
 		<p bind:this={subtitleRef} class="text-body text-xl mb-8 max-w-2xl mx-auto opacity-0">
-			Rodinná stavební firma s dlouholetými zkušenostmi. Nabízíme kvalitní rekonstrukce, zednické práce, obklady, dlažby a další stavební služby.
+			{m['hero.subtitle']()}
 		</p>
 		<div bind:this={ctaRef} class="flex flex-col sm:flex-row gap-4 justify-center opacity-0">
-			<a href="/kontakt" class="btn-primary"> Kontaktovat nás </a>
-			<a href="/sluzby" class="btn-secondary"> Naše služby </a>
+			<a href="/kontakt" class="btn-primary"> {m['hero.cta']()} </a>
+			<a href="/sluzby" class="btn-secondary"> {m['common.services']()} </a>
 		</div>
 	</div>
 
