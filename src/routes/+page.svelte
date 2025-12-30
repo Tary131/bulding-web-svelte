@@ -35,13 +35,13 @@
 </script>
 
 <svelte:head>
-	<title>Building Company - Professional Construction Services</title>
-	<meta name="description" content="Expert construction and building services. Quality craftsmanship for your dream home or commercial project." />
+	<title>HR Stavby - Profesionální stavební služby</title>
+	<meta name="description" content="Rodinná stavební firma s dlouholetými zkušenostmi. Nabízíme kvalitní rekonstrukce, zednické práce, obklady, dlažby a další stavební služby." />
 </svelte:head>
 
 <Header />
 
-<main>
+<main class="pt-24 bg-white dark:bg-secondary-900 min-h-screen">
 	<div bind:this={heroRef}>
 		<Hero />
 	</div>
@@ -50,7 +50,7 @@
 		<AboutSection />
 	</section>
 
-	<section bind:this={servicesRef} class="py-20 bg-secondary-50 dark:bg-secondary-950">
+	<section bind:this={servicesRef} class="py-20 bg-white dark:bg-secondary-950">
 		<ServicesSection />
 	</section>
 
@@ -58,7 +58,7 @@
 		<ProjectsSection />
 	</section>
 
-	<section class="py-20 bg-primary-50 dark:bg-secondary-950">
+	<section class="py-20 bg-white dark:bg-secondary-950">
 		<ContactSection />
 	</section>
 </main>

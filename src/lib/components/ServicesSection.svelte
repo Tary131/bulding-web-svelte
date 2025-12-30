@@ -1,51 +1,48 @@
 <script lang="ts">
-	import { HomeIcon, BuildingOfficeIcon, WrenchScrewdriverIcon, PaintBrushIcon } from 'heroicons-svelte/24/outline';
+	import { services } from '../data/services';
+	import { HomeIcon, WrenchScrewdriverIcon, PaintBrushIcon, BuildingOffice2Icon, SparklesIcon } from 'heroicons-svelte/24/outline';
 
-	const services = [
-		{
-			icon: HomeIcon,
-			title: 'Residential Construction',
-			description: 'Custom homes, renovations, and additions tailored to your lifestyle and needs.'
-		},
-		{
-			icon: BuildingOfficeIcon,
-			title: 'Commercial Projects',
-			description: 'Office buildings, retail spaces, and commercial facilities built to code.'
-		},
-		{
-			icon: WrenchScrewdriverIcon,
-			title: 'Renovations & Remodeling',
-			description: 'Transform your existing space with our expert renovation services.'
-		},
-		{
-			icon: PaintBrushIcon,
-			title: 'Design & Planning',
-			description: 'Comprehensive design services to bring your vision from concept to reality.'
-		}
-	];
+	const serviceIcons: Record<string, any> = {
+		'rekonstrukce-bytu-domu': HomeIcon,
+		'zednicke-prace': WrenchScrewdriverIcon,
+		'obklady-dlazby': PaintBrushIcon,
+		'sadrokartony': BuildingOffice2Icon,
+		'fasady': SparklesIcon
+	};
+
+	const displayedServices = services.slice(0, 5);
 </script>
 
 <div class="container-custom">
 	<div class="text-center mb-12">
-		<h2 class="heading-2 mb-4">Our Services</h2>
+		<h2 class="heading-2 mb-4 text-secondary-900 dark:text-white">Naše služby</h2>
 		<p class="text-body max-w-2xl mx-auto">
-			Comprehensive construction services to meet all your building needs. From initial design to
-			final inspection, we're with you every step of the way.
+			Komplexní stavební řešení pro vaše projekty. Nabízíme širokou škálu stavebních služeb pro vaše byty, domy a další objekty.
 		</p>
 	</div>
 
-	<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-		{#each services as service}
-			<div
-				class="bg-white dark:bg-secondary-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow"
+	<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+		{#each displayedServices as service}
+			<a
+				href="/sluzby/{service.slug}"
+				class="bg-white dark:bg-secondary-800 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border-2 border-transparent hover:border-primary-500/20 dark:hover:border-primary-400/20 block h-full"
 			>
-				<div class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center mb-4">
-					<svelte:component this={service.icon} class="w-6 h-6 text-primary-600 dark:text-primary-400" />
+				<div class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-2xl flex items-center justify-center mb-4">
+					{#if serviceIcons[service.slug]}
+						<svelte:component
+							this={serviceIcons[service.slug]}
+							class="w-6 h-6 text-primary-500 dark:text-primary-400"
+						/>
+					{/if}
 				</div>
-				<h3 class="heading-3 mb-2">{service.title}</h3>
-				<p class="text-body text-sm">{service.description}</p>
-			</div>
+				<h3 class="heading-3 mb-2 text-secondary-900 dark:text-white">{service.title}</h3>
+				<p class="text-body text-sm">{service.shortDescription}</p>
+			</a>
 		{/each}
+	</div>
+
+	<div class="text-center mt-8">
+		<a href="/sluzby" class="btn-secondary">Zobrazit všechny služby</a>
 	</div>
 </div>
 

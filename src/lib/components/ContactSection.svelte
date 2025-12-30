@@ -6,23 +6,22 @@
 <div class="container-custom">
 	<div class="grid md:grid-cols-2 gap-12">
 		<div>
-			<h2 class="heading-2 mb-6">Get In Touch</h2>
+			<h2 class="heading-2 mb-6 text-secondary-900 dark:text-white">Kontaktujte nás</h2>
 			<p class="text-body mb-8">
-				Ready to start your next project? Contact us today for a free consultation and quote. We're
-				here to answer your questions and help bring your vision to life.
+				Máte zájem o naše služby? Kontaktujte nás ještě dnes a domluvíme se na bezplatné konzultaci. Jsme tu, abychom odpověděli na vaše otázky a pomohli vám realizovat vaše představy.
 			</p>
 
 			<div class="space-y-6">
 				<div class="flex items-start gap-4">
 					<div
-						class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center flex-shrink-0"
+						class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-2xl flex items-center justify-center flex-shrink-0"
 					>
-						<PhoneIcon class="w-6 h-6 text-primary-600 dark:text-primary-400" />
+						<PhoneIcon class="w-6 h-6 text-primary-500 dark:text-primary-400" />
 					</div>
 					<div>
-						<h3 class="font-semibold text-secondary-900 dark:text-secondary-100 mb-1">Phone</h3>
+						<h3 class="font-semibold text-secondary-900 dark:text-secondary-100 mb-1">Telefon</h3>
 						<p class="text-body">
-							<a href="tel:+420123456789" class="hover:text-primary-600 dark:hover:text-primary-400">
+							<a href="tel:+420123456789" class="hover:text-primary-500 dark:hover:text-primary-400">
 								+420 123 456 789
 							</a>
 						</p>
@@ -31,18 +30,18 @@
 
 				<div class="flex items-start gap-4">
 					<div
-						class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center flex-shrink-0"
+						class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-2xl flex items-center justify-center flex-shrink-0"
 					>
-						<EnvelopeIcon class="w-6 h-6 text-primary-600 dark:text-primary-400" />
+						<EnvelopeIcon class="w-6 h-6 text-primary-500 dark:text-primary-400" />
 					</div>
 					<div>
 						<h3 class="font-semibold text-secondary-900 dark:text-secondary-100 mb-1">Email</h3>
 						<p class="text-body">
 							<a
-								href="mailto:info@buildingcompany.com"
-								class="hover:text-primary-600 dark:hover:text-primary-400"
+								href="mailto:info@hrstavby.cz"
+								class="hover:text-primary-500 dark:hover:text-primary-400"
 							>
-								info@buildingcompany.com
+								info@hrstavby.cz
 							</a>
 						</p>
 					</div>
@@ -50,13 +49,13 @@
 
 				<div class="flex items-start gap-4">
 					<div
-						class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center flex-shrink-0"
+						class="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-2xl flex items-center justify-center flex-shrink-0"
 					>
-						<MapPinIcon class="w-6 h-6 text-primary-600 dark:text-primary-400" />
+						<MapPinIcon class="w-6 h-6 text-primary-500 dark:text-primary-400" />
 					</div>
 					<div>
-						<h3 class="font-semibold text-secondary-900 dark:text-secondary-100 mb-1">Address</h3>
-						<p class="text-body">123 Construction Street<br />Building City, BC 12345</p>
+						<h3 class="font-semibold text-secondary-900 dark:text-secondary-100 mb-1">Adresa</h3>
+						<p class="text-body">Praha a okolí<br />Česká republika</p>
 					</div>
 				</div>
 			</div>

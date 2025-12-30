@@ -1,12 +1,15 @@
 <script lang="ts">
 	import ContactSection from '../../lib/components/ContactSection.svelte';
-	import Header from '../../lib/components/Header.svelte';
 	import Footer from '../../lib/components/Footer.svelte';
+	import Header from '../../lib/components/Header.svelte';
 </script>
 
 <svelte:head>
-	<title>Contact Us - Building Company</title>
-	<meta name="description" content="Get in touch with Building Company for your construction needs." />
+	<title>Kontakt - HR Stavby</title>
+	<meta
+		name="description"
+		content="Kontaktujte nás pro bezplatnou konzultaci vašeho stavebního projektu."
+	/>
 </svelte:head>
 
 <Header />
@@ -18,4 +21,3 @@
 </main>
 
 <Footer />
-

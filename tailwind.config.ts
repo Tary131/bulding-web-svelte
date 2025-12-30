@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 export default {
+	darkMode: 'class',
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
@@ -16,34 +17,34 @@ export default {
 					foreground: 'hsl(var(--popover-foreground))'
 				},
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))',
-					50: '#f0f9ff',
-					100: '#e0f2fe',
-					200: '#bae6fd',
-					300: '#7dd3fc',
-					400: '#38bdf8',
-					500: '#0ea5e9',
-					600: '#0284c7',
-					700: '#0369a1',
-					800: '#075985',
-					900: '#0c4a6e',
-					950: '#082f49'
+					DEFAULT: '#F57C1F',
+					foreground: '#ffffff',
+					50: '#fef3e7',
+					100: '#fde4c4',
+					200: '#fbc88d',
+					300: '#f9a855',
+					400: '#F57C1F',
+					500: '#F57C1F',
+					600: '#d66a1a',
+					700: '#b85715',
+					800: '#9a4513',
+					900: '#7c3310',
+					950: '#5e220d'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))',
-					50: '#f8fafc',
-					100: '#f1f5f9',
-					200: '#e2e8f0',
-					300: '#cbd5e1',
-					400: '#94a3b8',
-					500: '#64748b',
-					600: '#475569',
-					700: '#334155',
-					800: '#1e293b',
-					900: '#0f172a',
-					950: '#020617'
+					50: '#ffffff',
+					100: '#fafafa',
+					200: '#f5f5f5',
+					300: '#f0f0f0',
+					400: '#e5e5e5',
+					500: '#d4d4d4',
+					600: '#a3a3a3',
+					700: '#737373',
+					800: '#525252',
+					900: '#404040',
+					950: '#262626'
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
